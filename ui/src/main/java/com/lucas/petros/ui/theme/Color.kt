@@ -1,4 +1,4 @@
-package com.lucas.petros.examplemvi.ui.theme
+package com.lucas.petros.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

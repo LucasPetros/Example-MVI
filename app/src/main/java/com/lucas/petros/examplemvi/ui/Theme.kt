@@ -1,4 +1,4 @@
-package com.lucas.petros.examplemvi.ui.theme
+package com.lucas.petros.examplemvi.ui
 
 import android.app.Activity
 import android.os.Build
@@ -13,7 +13,15 @@ import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
+
 import androidx.core.view.WindowCompat
+import com.lucas.petros.ui.theme.Pink40
+import com.lucas.petros.ui.theme.Pink80
+import com.lucas.petros.ui.theme.Purple40
+import com.lucas.petros.ui.theme.Purple80
+import com.lucas.petros.ui.theme.PurpleGrey40
+import com.lucas.petros.ui.theme.PurpleGrey80
+import com.lucas.petros.ui.theme.Typography
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,

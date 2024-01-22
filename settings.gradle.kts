@@ -14,5 +14,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "ExampleMVI"
-include(":app")
- 
+include("app", "core", "network", "ui",":features", ":features:home")
+
