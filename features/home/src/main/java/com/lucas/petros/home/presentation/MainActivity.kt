@@ -1,47 +1,35 @@
 package com.lucas.petros.home.presentation
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.runtime.remember
+import androidx.navigation.compose.rememberNavController
 import com.lucas.petros.examplemvi.ui.ExampleMVITheme
+import com.lucas.petros.home.presentation.navigation.NavigationActions
+import com.lucas.petros.home.presentation.navigation.navgraph.HomeNavGraph
 
-
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ExampleMVITheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
-            }
+            HomeMainScreen()
         }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+    @Composable
+    private fun HomeMainScreen() {
+        ExampleMVITheme {
+            val navController = rememberNavController()
+            val navigationActions = remember(navController) {
+                NavigationActions(navController)
+            }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    com.lucas.petros.examplemvi.ui.ExampleMVITheme {
-        Greeting("Android")
+            HomeNavGraph(
+                navController = navController,
+                navigationActions = navigationActions
+            )
+        }
     }
 }
