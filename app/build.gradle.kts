@@ -42,6 +42,7 @@ android {
         compose = true
     }
     composeOptions {
+
         kotlinCompilerExtensionVersion = Compose.composeCompilerVersion
     }
     packaging {
@@ -53,10 +54,10 @@ android {
 
 dependencies {
 
-
     implementation(Compose.compiler)
     implementation(Compose.ui)
     implementation(Compose.uiToolingPreview)
+    debugImplementation(Compose.uiToolingPreview)
     implementation(Compose.hiltNavigationCompose)
     implementation(Compose.material)
     implementation(Compose.runtime)

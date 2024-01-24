@@ -1,12 +1,17 @@
 package com.lucas.petros.home.data.repository
 
-import kotlin.math.roundToInt
+import kotlinx.coroutines.delay
+import kotlin.random.Random
 
 class IHomeRepository : HomeRepository {
-    override suspend fun getRoundNumber() =
-        runCatching {
-            Math.random().roundToInt()
+    override suspend fun getRoundNumber(): Result<Int> {
+        delay(500L)
+        return runCatching {
+            Random.nextInt()
         }.onSuccess {
-            Result.success(it)
-        }.onFailure { throw Exception() }
+            return Result.success(it)
+        }.onFailure {
+            Result.failure<Exception>(it)
+        }
+    }
 }
