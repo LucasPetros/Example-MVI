@@ -3,9 +3,10 @@ package com.lucas.petros.home.presentation.scenes
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
+import com.lucas.petros.core.navigation.NavigationActions
 import com.lucas.petros.home.presentation.composables.ErrorScreen
 import com.lucas.petros.home.presentation.composables.LoadingScreen
-import com.lucas.petros.home.presentation.navigation.NavigationActions
+
 
 @Composable
 fun HomeScreen(
@@ -17,7 +18,7 @@ fun HomeScreen(
         when (uiState) {
 
             is HomeUiState.HomeLoaded -> {
-                HomeScreenContent(paddingValues,uiState.number)
+                HomeScreenContent(paddingValues, uiState.number)
             }
 
             is HomeUiState.Processing -> {
@@ -29,7 +30,7 @@ fun HomeScreen(
             }
 
             is HomeUiState.Navigate -> {
-                navigationActions.navigateToNextScreen()
+                navigationActions.navigateToHome
             }
 
             is HomeUiState.Error -> {
@@ -42,8 +43,8 @@ fun HomeScreen(
 @Composable
 fun HomeScreenContent(
     paddingValues: PaddingValues,
-    value:Int?
-    ) {
+    value: Int?
+) {
 
 }
 

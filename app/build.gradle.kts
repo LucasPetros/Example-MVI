@@ -22,6 +22,10 @@ android {
         }
     }
 
+    hilt {
+        enableAggregatingTask = false
+    }
+
     buildTypes {
         named("release") {
             isMinifyEnabled = false
@@ -50,17 +54,35 @@ android {
 dependencies {
 
 
-    implementation(project(Modules.core))
-    implementation(project(Modules.network))
-    implementation(project(Modules.ui))
-    implementation(project(Modules.home))
-    implementation(Compose.material)
-    implementation(Compose.material3)
-    implementation(Google.material)
+    implementation(Compose.compiler)
     implementation(Compose.ui)
+    implementation(Compose.uiToolingPreview)
+    implementation(Compose.hiltNavigationCompose)
+    implementation(Compose.material)
+    implementation(Compose.runtime)
+    implementation(Compose.navigation)
+    implementation(Compose.viewModelCompose)
+    implementation(Compose.activityCompose)
 
     implementation(DaggerHilt.hiltAndroid)
     kapt(DaggerHilt.hiltCompiler)
+
+    implementation(project(Modules.core))
+    implementation(project(Modules.ui))
+    implementation(project(Modules.network))
+    implementation(project(Modules.home))
+
+    implementation(AndroidX.coreKtx)
+    implementation(AndroidX.appCompat)
+
+    implementation(Coil.coilCompose)
+
+    implementation(Google.material)
+
+    implementation(Retrofit.okHttp)
+    implementation(Retrofit.retrofit)
+    implementation(Retrofit.okHttpLoggingInterceptor)
+    implementation(Retrofit.moshiConverter)
 
     kapt(Room.roomCompiler)
     implementation(Room.roomKtx)

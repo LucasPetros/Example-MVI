@@ -1,19 +1,20 @@
-package com.lucas.petros.home.presentation.navigation.navgraph
+package com.lucas.petros.examplemvi.navgraph
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.lucas.petros.home.presentation.navigation.Destinations.HOME_ROUTE
-import com.lucas.petros.home.presentation.navigation.NavigationActions
+import com.lucas.petros.core.navigation.NavigationActions
+import com.lucas.petros.core.navigation.Route
+
 import com.lucas.petros.home.presentation.navigation.routes.HomeRoute
 
 @Composable
-fun HomeNavGraph(
+fun MainNavGraph(
     modifier: Modifier = Modifier,
     navController: NavHostController,
-    startDestination: String = HOME_ROUTE,
+    startDestination: String = Route.HOME,
     navigationActions: NavigationActions
 ) {
     NavHost(
@@ -22,7 +23,7 @@ fun HomeNavGraph(
         modifier = modifier
     ) {
 
-        composable(route = HOME_ROUTE) {
+        composable(route = Route.HOME) {
             HomeRoute(navigationActions)
         }
     }
