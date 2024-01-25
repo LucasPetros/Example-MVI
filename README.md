@@ -25,7 +25,7 @@ O projeto segue os princípios da arquitetura limpa, promovendo a separação de
 ### ----------------------------------------------------------------------------------------------
 
 ## Layers Architecture
-![MVI-LAYER -ARCHITECTURE](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*K-uEm96OX-j8pCeqi69W4g.png))
+![MVI-LAYER -ARCHITECTURE](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*K-uEm96OX-j8pCeqi69W4g.png)
 
 ### ----------------------------------------------------------------------------------------------
 
