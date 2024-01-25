@@ -25,7 +25,7 @@ O projeto segue os princípios da arquitetura limpa, promovendo a separação de
 ### ----------------------------------------------------------------------------------------------
 
 ## Android 3 Layers Architecture
-![https://fernandocejas.com/2018/05/07/architecting-android-reloaded/](https://github.com/android10/Sample-Data/blob/master/Android-CleanArchitecture-Kotlin/architecture/clean_architecture_reloaded_layers.png)
+![MVI-LAYER -ARCHITECTURE](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*K-uEm96OX-j8pCeqi69W4g.png))
 
 ### ----------------------------------------------------------------------------------------------
 
